@@ -1,1 +1,1 @@
-bhumi thapliyal
+{"username":"bhumi ka pati sumit","gender":"male"}
