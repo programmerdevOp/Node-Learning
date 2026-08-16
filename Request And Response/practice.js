@@ -4,22 +4,27 @@ const fs = require('fs');
 const server = http.createServer((req, res) => {
     console.log(req.url, req.method, req.headers);
 
-    if(req.url === '/home'){
+    if (req.url === '/home') {
         res.write('<h1>Welcome to HomePage</h1>')
-    } else if(req.url === '/men'){
+        return res.end();
+    } else if (req.url === '/men') {
         res.write('<h1>Welcome to MenPage</h1>')
-    } else if(req.url === '/women'){
+        return res.end();
+    } else if (req.url === '/women') {
         res.write('<h1>Welcome to WomenPage</h1>')
-    } else if(req.url === '/kids'){
+        return res.end();
+    } else if (req.url === '/kids') {
         res.write('<h1>Welcome to KidsPage</h1>')
-    } else if(req.url === '/cart'){
+        return res.end();
+    } else if (req.url === '/cart') {
         res.write('<h1>Welcome to Cart Page</h1>')
+        return res.end();
     }
 
     res.write(`
         <html>
         < head >
-        <title>Myntra</title>
+           <title>Myntra</title>
         </head >
          <body>
            <head>
